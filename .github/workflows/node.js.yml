@@ -27,9 +27,9 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - name: Install dependencies
-    - run: npm install
+      run: npm install
     - name: Run test
-    - run: npm test
+      run: npm test
     - name: Check test completion status, fails if red
       if: env.WORKFLOW_CONCLUSION == 'failure'
       run: exit 1
